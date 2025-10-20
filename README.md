@@ -34,7 +34,7 @@ To use any of our models, pick an appropriate `model_path` from:
 ## Inference Examples
 
 ### Basic Inference
-This is a simple example of how to use Granite-4.0-Nano-300M model.
+This is a simple example of how to use Granite-4.0-300M model.
 
 ```python
 import torch
