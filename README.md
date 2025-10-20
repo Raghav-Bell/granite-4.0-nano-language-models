@@ -22,14 +22,14 @@ Core evaluation results for all model variants are provided on their respective 
 
 ## How to Use our Models?
 To use any of our models, pick an appropriate `model_path` from:
-1. `ibm-granite/granite-4.0-nano-1b-base`
-2. `ibm-granite/granite-4.0-nano-1b`
-3. `ibm-granite/granite-4.0-h-nano-1b-base`
-4. `ibm-granite/granite-4.0-h-nano-1b`
-5. `ibm-granite/granite-4.0-nano-300m-base`
-6. `ibm-granite/granite-4.0-nano-300m`
-7. `ibm-granite/granite-4.0-h-nano-300m-base`
-8. `ibm-granite/granite-4.0-h-nano-300m`
+1. `ibm-granite/granite-4.0-1b-base`
+2. `ibm-granite/granite-4.0-1b`
+3. `ibm-granite/granite-4.0-h-1b-base`
+4. `ibm-granite/granite-4.0-h-1b`
+5. `ibm-granite/granite-4.0-300m-base`
+6. `ibm-granite/granite-4.0-300m`
+7. `ibm-granite/granite-4.0-h-300m-base`
+8. `ibm-granite/granite-4.0-h-300m`
 
 ## Inference Examples
 
@@ -41,7 +41,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "auto"
-model_path = "ibm-granite/granite-4.0-nano-300m"
+model_path = "ibm-granite/granite-4.0-300m"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 # drop device_map if running on CPU
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device)
@@ -76,7 +76,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "cuda"
 # model_path = ""
-model_path = "ibm-granite/granite-4.0-nano-300m"
+model_path = "ibm-granite/granite-4.0-300m"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 # drop device_map if running on CPU
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device)
@@ -178,7 +178,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "cuda"
-model_path = "ibm-granite/granite-4.0-nano-300m" 
+model_path = "ibm-granite/granite-4.0-300m" 
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 # drop device_map if running on CPU
@@ -218,7 +218,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "cuda"
 # model_path = ""
-model_path = "ibm-granite/granite-4.0-nano-300m"
+model_path = "ibm-granite/granite-4.0-300m"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 # drop device_map if running on CPU
@@ -257,9 +257,9 @@ print(output[0])
 <!-- You can find examples about other capabilities of Granite Nano 4.0 models in our [prompt engineering guide](). -->
 
 ## How to Download our Models?
-The model of choice (`ibm-granite/granite-4.0-nano-300m` in this example) can be cloned using:
+The model of choice (`ibm-granite/granite-4.0-300m` in this example) can be cloned using:
 ```shell
-git clone https://https://huggingface.co/ibm-granite/ibm-granite/granite-4.0-nano-300m
+git clone https://https://huggingface.co/ibm-granite/ibm-granite/granite-4.0-300m
 ```
 
 ## How to Contribute to this Project?
