@@ -13,7 +13,7 @@ Granite 4.0 Nano language models are lightweight, state-of-the-art open foundati
 
 All models are publicly released under the Apache 2.0 license, allowing free use for both research and commercial purposes. The data curation and training processes were specifically designed for enterprise scenarios and customization, incorporating governance, risk, and compliance (GRC) evaluations alongside IBM’s standard data clearance and document quality review procedures.
 
-Granite 4.0 Nano models are available in two sizes, 300M and 1B parameters. This model family supports dense and dense-hybrid architectures. We release both base models (checkpoints after pretraining) and instruct models (checkpoints fine-tuned for dialogue, instruction following, helpfulness, and safety).
+Granite 4.0 Nano models are available in two sizes, 350M and 1B parameters. This model family supports dense and dense-hybrid architectures. We release both base models (checkpoints after pretraining) and instruct models (checkpoints fine-tuned for dialogue, instruction following, helpfulness, and safety).
 
 ## Evaluation Results
 Core evaluation results for all model variants are provided on their respective model cards, and a more comprehensive extended evaluation is available [here](URL).
@@ -26,22 +26,22 @@ To use any of our models, pick an appropriate `model_path` from:
 2. `ibm-granite/granite-4.0-1b`
 3. `ibm-granite/granite-4.0-h-1b-base`
 4. `ibm-granite/granite-4.0-h-1b`
-5. `ibm-granite/granite-4.0-300m-base`
-6. `ibm-granite/granite-4.0-300m`
-7. `ibm-granite/granite-4.0-h-300m-base`
-8. `ibm-granite/granite-4.0-h-300m`
+5. `ibm-granite/granite-4.0-350m-base`
+6. `ibm-granite/granite-4.0-350m`
+7. `ibm-granite/granite-4.0-h-350m-base`
+8. `ibm-granite/granite-4.0-h-350m`
 
 ## Inference Examples
 
 ### Basic Inference
-This is a simple example of how to use Granite-4.0-300M model.
+This is a simple example of how to use Granite-4.0-350M model.
 
 ```python
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "auto"
-model_path = "ibm-granite/granite-4.0-300m"
+model_path = "ibm-granite/granite-4.0-350m"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 # drop device_map if running on CPU
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device)
@@ -76,7 +76,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "cuda"
 # model_path = ""
-model_path = "ibm-granite/granite-4.0-300m"
+model_path = "ibm-granite/granite-4.0-350m"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 # drop device_map if running on CPU
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map=device)
@@ -178,7 +178,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "cuda"
-model_path = "ibm-granite/granite-4.0-300m" 
+model_path = "ibm-granite/granite-4.0-350m" 
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 # drop device_map if running on CPU
@@ -218,7 +218,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 device = "cuda"
 # model_path = ""
-model_path = "ibm-granite/granite-4.0-300m"
+model_path = "ibm-granite/granite-4.0-350m"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 # drop device_map if running on CPU
@@ -257,9 +257,9 @@ print(output[0])
 <!-- You can find examples about other capabilities of Granite Nano 4.0 models in our [prompt engineering guide](). -->
 
 ## How to Download our Models?
-The model of choice (`ibm-granite/granite-4.0-300m` in this example) can be cloned using:
+The model of choice (`ibm-granite/granite-4.0-350m` in this example) can be cloned using:
 ```shell
-git clone https://https://huggingface.co/ibm-granite/ibm-granite/granite-4.0-300m
+git clone https://https://huggingface.co/ibm-granite/ibm-granite/granite-4.0-350m
 ```
 
 ## How to Contribute to this Project?
